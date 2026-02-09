@@ -11,8 +11,10 @@
   command = "npm install && npm run build"
 
 # Specify Node.js version (required for Vite 7.x)
+# NPM_CONFIG_PRODUCTION=false ensures devDependencies (like vite) are installed
 [build.environment]
   NODE_VERSION = "20.20.0"
+  NPM_CONFIG_PRODUCTION = "false"
 
 # Redirect rules for Single Page Application (SPA)
 # This ensures React Router works correctly
