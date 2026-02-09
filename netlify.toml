@@ -7,8 +7,12 @@
   # Directory that contains the deploy-ready HTML files and assets
   publish = "dist"
   
-  # Default build command
-  command = "npm run build"
+  # Build command - install dependencies first, then build
+  command = "npm install && npm run build"
+
+# Specify Node.js version
+[build.environment]
+  NODE_VERSION = "18"
 
 # Redirect rules for Single Page Application (SPA)
 # This ensures React Router works correctly
