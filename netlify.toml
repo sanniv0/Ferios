@@ -7,8 +7,8 @@
   # Directory that contains the deploy-ready HTML files and assets
   publish = "dist"
   
-  # Build command - install dependencies first, then build
-  command = "npm install && npm run build"
+  # Build command - explicitly install dev dependencies (vite is in devDependencies)
+  command = "npm ci --include=dev && npm run build"
 
 # Specify Node.js version (required for Vite 7.x)
 # NPM_CONFIG_PRODUCTION=false ensures devDependencies (like vite) are installed
